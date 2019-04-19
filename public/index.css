@@ -1,0 +1,176 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+  font-size: 2vmin;
+}
+
+::-webkit-scrollbar-button {
+  display: block;
+  height: 0px;
+  border-radius: 0px;
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-button:hover {
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #09f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4af;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+* {
+  scrollbar-color: #09f #ccc;
+  scrollbar-width: thin;
+}
+
+textarea {
+  resize: none;
+}
+
+#loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  z-index: 1000; /* Modal is 1050 and should be above this. */
+  background-color: white;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.loading-finished {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#screenArea {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  font-weight: bold;
+}
+
+#chatArea {
+  flex: 0.3;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  overflow: auto;
+}
+
+.chat-item {
+  display: flow-root;
+}
+
+.chat-bubble {
+  padding: 6px 10px 6px 10px;
+  margin: 3px;
+  max-width: 50vw;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+.chat-remote {
+  border-radius: 1px 8px 8px 8px;
+  float: left;
+  background-color: #ddd;
+}
+
+.chat-local {
+  border-radius: 8px 8px 1px 8px;
+  float: right;
+  background-color: #09f;
+  color: #fff;
+}
+
+#inputArea {
+  display: flex;
+  flex-direction: row;
+  min-height: 100px;
+  border-top: 1px solid #ccc;
+}
+
+#input {
+  display: flex;
+  flex: 1;
+  border: 0px;
+  padding: 10px;
+}
+
+#send {}
+
+#letters {
+  flex: 0.2;
+  min-height: 128px;
+  line-height: 10vh;
+  width: 100%;
+  text-align: center;
+}
+
+#board {
+  flex: 0.8;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid {
+  max-width: 40vh;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.box {
+  background: #ff6347;
+  margin: 5px;
+  color: white;
+  flex: 1 0 auto;
+  position: relative;
+  border-radius: 5px;
+}
+
+.box:after {
+  content: "";
+  float: left;
+  display: block;
+  padding-top: 100%;
+}
+
+.box .inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

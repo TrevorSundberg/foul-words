@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Boogle</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div id="loading" class="d-flex justify-content-center">
+    <div class="spinner-border text-primary" style="width: 10vmin; height: 10vmin;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div id="screenArea">
+    <div id="letters">
+      HELLO
+    </div>
+    <div id="board">
+      <div class="grid">
+        <div class="row">
+          <div class="box">
+            <div class="inner">A</div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="chatArea">
+  </div>
+  <div id="inputArea">
+    <textarea id="input" placeholder="Type a message..."></textarea>
+    <input class="btn btn-outline-primary" id="send" type="button" value="Send">
+  </div>
+
+  <div id="errorModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Error</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="errorBody">
+        </div>
+        <div class="modal-footer">
+          <button id="errorRefresh" type="button" class="btn btn-secondary" data-dismiss="modal">Refresh</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
